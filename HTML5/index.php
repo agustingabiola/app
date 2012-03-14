@@ -4,18 +4,15 @@
         <script type="text/javascript" src="jquery-1.7.1.js"></script>
         
         <script> //Ejercicio 2)3)4)5)
-            $(document).ready(Loaded);
-           //window.onload=Loaded;
+           $(document).ready(Loaded);
            function Loaded (){
                window.alert("The page is loaded.");
                document.getElementById('alias').focus();               
            }
-           //$("#botonRespuesta").click(function() {
-               function magic(){ 
+           //Ejercicio 5) 6)
+           function magic(){ 
                 var param = $("#alias").val();
                 url = "http://localhost/app/HTML5/api/dispatcher.php";
-                window.alert("la puta madree");
-
                 $.post(url, {service: 'welcome.hello', params: {name: param}}, function(data){
                                                                                 $("#respuesta").html(data);});
                 };
