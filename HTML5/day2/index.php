@@ -8,20 +8,15 @@
 	<script src="http://code.jquery.com/mobile/1.1.0-rc.1/jquery.mobile-1.1.0-rc.1.min.js"></script>
 </head> 
 <body> 
-
-<div data-role="page">
-
+    <div data-role="page">
 	<div data-role="header">
 		<h1>My Title</h1>
 	</div><!-- /header -->
-
 	<div data-role="content">	
 		<p>Hello world</p>		
 	</div><!-- /content -->
-    <a data-role="button" id ="botonRespuesta" data-icon="star" data-mini="true">Magic previous button</a>
-    <script> $("#botonRespuesta").buttonMarkup({ inline: "true" }); </script>
-    <a data-role="textarea" id="alias"></a> 
-
-</div><!-- /page -->
+    <a href="http://localhost/app/HTML5/day1/index.php" data-role="button" id ="botonDiaUno" data-icon="star" data-mini="true" data-inline='true'>Ir al dia Uno</a>
+    </div><!-- /page -->
+    <script src="day2.js" type="text/javascript"></script>
 </body>
 </html>

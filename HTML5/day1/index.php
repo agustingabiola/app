@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -6,10 +7,18 @@
     </head>
     <body>
         <h1>Dia Uno</h1>        
-        <input type="button" id ="botonRespuesta" value="Magic button"/> 
-        <textarea id="alias"></textarea> 
-        <div id="respuesta" style="position:absolute; left: 200px; bottom: 200px;"> Aqui va la respuesta del dispatcher</div>
-        <div id="respuestaMovie" > Aqui las peliculas</div> 
+        <div id="botones">
+        <form>
+            <input type="button" id ="botonRespuesta" value="Obtener Respuesta"/> 
+            </br></br>
+            <textarea id="alias">Escribe tu nombre...</textarea> 
+            </br></br>
+            </br></br>
+            <input type="button" value="Get Movies" class="btday1" onclick="respuestaMovies()">
+        </br></br>
+        </form>
+        </div>        
+        <div id="respuesta"> Aqui va la respuesta del dispatcher.php</div>
         <script src="day1.js" type="text/javascript"></script>
     </body>
 </html>
