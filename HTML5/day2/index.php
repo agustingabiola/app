@@ -19,7 +19,7 @@
 		<p>Hello world</p>		
 	</div><!-- /content -->
     <a data-role="button" id ="botonRespuesta" data-icon="star" data-mini="true">Magic previous button</a>
-    $("#botonRespuesta").buttonMarkup({ inline: "true" });
+    <script> $("#botonRespuesta").buttonMarkup({ inline: "true" }); </script>
     <a data-role="textarea" id="alias"></a> 
 
 </div><!-- /page -->
