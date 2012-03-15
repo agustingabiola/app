@@ -4,12 +4,10 @@
     $(document).ready(function() {
         $.mobile.showPageLoadingMsg();
     });
-    $.keypress(function(e){
-        alert ('apretaste una tecla');
-        if(e.keyCode == KEYCODE_ESC){
-            alert ('apretaste escape');
-            $.mobile.hidePageLoadingMsg();
-        }
+    $(document).keypress(function(e) {
+    if (e.keyCode == 27) {
+        $.mobile.hidePageLoadingMsg();
+    }
     });
 
 
