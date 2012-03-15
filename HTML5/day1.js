@@ -36,3 +36,11 @@ $("#respuesta").ajaxError(function(event, request, settings){
        }
    $(this).css(properties);
 });
+
+//Punto 9)
+function respuestaMovie (){
+    url = "http://localhost/app/HTML5/api/dispatcher.php";
+    $.post(url, {service: 'welcome.hello', params: {name: param}}, function(data){$("#respuestaMovie").html(data);});
+}
+
+respuestaMovie ();

@@ -5,11 +5,11 @@
         <title>BootCamp HTML5</title>
     </head>
     <body>
-        <h1>It Works!</h1>
-        <h2> <input type="button" id ="botonRespuesta" value="Magic button"/></h2> 
-        <h3> <textarea id="alias"></textarea> 
-             <div id="respuesta" style="position:absolute; left: 200px; bottom: 200px;"> Aqui va la respuesta del dispatcher</div>             
-        </h3>
+        <h1>Dia Uno</h1>        
+        <input type="button" id ="botonRespuesta" value="Magic button"/> 
+        <textarea id="alias"></textarea> 
+        <div id="respuesta" style="position:absolute; left: 200px; bottom: 200px;"> Aqui va la respuesta del dispatcher</div>
+        <div id="respuestaMovie" > Aqui las peliculas</div> 
         <script src="day1.js" type="text/javascript"></script>
     </body>
 </html>
