@@ -24,7 +24,7 @@ $("#alias").keypress(function(event) {
 //Punto 8)
 function subrayarNombre (){
     var name = $("#alias").val();
-    $("#respuesta").html().replace( name , '<span style="text-decoration: underline">' +name + '</span>');
+    $("#respuesta").html($("#respuesta").html().replace( name , '<span style="text-decoration: underline">' +name + '</span>'));
 }
 //Punto 7)
 /*
@@ -45,24 +45,22 @@ $("#respuesta").ajaxError(function(event, request, settings){
 
 //Punto 9)
 function respuestaMovies (){
-    $.ajax({
-        url: "http://localhost/app/HTML5/api/dispatcher.php",
-        contentType: "application/json",
-        data: {service: 'movie.getTop'},
-        dataType: "json",
-        success: function(data){
-            var JSONobject= eval(data);
-            for (var i = 0 ; i < 5; i++) {
-                setTimeout(showMovie(JSONobject,i),2500);
-            };
-        }
+    var url = "http://localhost/app/HTML5/api/dispatcher.php";
+    $.ajax(url, {        
+            data: {service: 'movie.getTop', params: {'name': 'movies'}},
+            dataType: 'json' ,
+            success: function(data) {
+                var obj = data;
+                var html = '<h2>Lista de películas</h2>';
+                var i=0;
+                while (obj[i]!= null) {                    
+                    html += "<div><b>"+obj[i].Name+"</b> ("+obj[i].ReleaseYear+")";
+                    html += "<h2><img src='"+obj[i].BoxArt.SmallUrl+"' /></h2>";
+                    html += "<p>"+obj[i].Synopsis+"</p></div>";
+                    ++i;
+                } 
+                $("#respuesta").html(html);
+            }
+
     });
-}
-function showMovie(JSONobject,i){
-    var title= JSONobject[i].ShortName;
-    var year= JSONobject[i].ReleaseYear;
-    var sinop= JSONobject[i].ShortSynopsis;
-    var img= JSONobject[i].BoxArt.SmallUrl;
-    var all= img+title + year + sinop;
-    $("#respuesta").html(all);
 }
