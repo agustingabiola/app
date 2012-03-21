@@ -29,23 +29,23 @@ function Movie (p_title, p_rating, p_id){
     
     this.play = function (){
         //console.log ('The movie ' +title+ ' is now being played :)');
-        $.publish('movie_subscription',['playing', this]);
+        $.publish("movie_subscription",["playing", this]);
     }
     
     this.stop = function (){
         //console.log ('The movie with id: ' + id +' has now been stoppped!!');
-        $.publish('movie_subscription',['stopped', this]);
+        $.publish("movie_subscription",["stopped", this]);
     }
     
     //--------Puntos 14-15
     this.setCast = function(array_cast){
-        this.movie_cast = array_cast;
+        movie_cast = array_cast;
     }
     
     this.getCast = function (){
         var solo_nombres = [];        
-        for (var i= 0, aux = this.movie_cast.length; i<aux; ++i){
-            solo_nombres[i] = this.movie_cast[i].getName();
+        for (var i= 0, aux = movie_cast.length; i<aux; ++i){
+            solo_nombres[i] = movie_cast[i].getName();
         }
         return solo_nombres;
     }

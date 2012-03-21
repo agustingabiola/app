@@ -1,8 +1,15 @@
-/* 
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
 //-------Puntos 3-6
+/* jQuery Tiny Pub/Sub - v0.7 - 10/27/2011
+* http://benalman.com/
+* Copyright (c) 2011 "Cowboy" Ben Alman; Licensed MIT, GPL */
+
+(function($) {
+  var o = $({});
+  $.subscribe = o.on.bind(o);
+  $.unsubscribe = o.off.bind(o);
+  $.publish = o.trigger.bind(o);
+}(jQuery));
+
 
 function MovieObserver (){
     this.handleSubscription = function(e, _state, _movie){
@@ -15,25 +22,3 @@ function MovieObserver (){
     }
     $.subscribe("movie_subscription", this.handleSubscription);
 }
-
-/* jQuery Tiny Pub/Sub - v0.7 - 10/27/2011
-* http://benalman.com/
-* Copyright (c) 2011 "Cowboy" Ben Alman; Licensed MIT, GPL */
-
-(function($) {
-
-  var o = $({});
-
-  $.subscribe = function() {
-    o.on.apply(o, arguments);
-  };
-
-  $.unsubscribe = function() {
-    o.off.apply(o, arguments);
-  };
-
-  $.publish = function() {
-    o.trigger.apply(o, arguments);
-  };
-
-}(jQuery));

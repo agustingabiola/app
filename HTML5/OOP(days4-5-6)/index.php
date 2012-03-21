@@ -6,9 +6,9 @@
         <title>Tema 3 (POO en JE)</title>
     </head>
     <body>
-        <script src="Clases/MovieModule.js" type="text/javascript"></script>
-        <script src="Clases/Movie.js" type="text/javascript"></script>
+        <script src="Clases/MovieModule.js" type="text/javascript"></script>        
         <script src="Clases/MovieObserver.js" type="text/javascript"></script>
+        <script src="Clases/Movie.js" type="text/javascript"></script>
         <script src="Clases/DownloadableMovie.js" type="text/javascript"></script>
         <script src="Clases/SocialMixin.js" type="text/javascript"></script>
         <script src="Clases/Actor.js" type="text/javascript"></script>
