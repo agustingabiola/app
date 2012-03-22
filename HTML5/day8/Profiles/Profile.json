@@ -1,0 +1,16 @@
+/* 
+ * Profile Json view
+ */
+var json_view = {
+    name: {
+        first: "Agustin",
+        last: "Gabiola"
+    },
+    title: "Ni Apu",
+    location: "Argentina",
+    area_of_work: "Desarrollo de Software",
+    actual_job: "Haciendo Nada at Nowhere",
+    previous_jobs: {},
+    education: "Universidad Nacional del...",
+    cv_link: "Bienvenido a mi CV !!"
+}
