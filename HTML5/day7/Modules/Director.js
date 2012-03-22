@@ -15,7 +15,7 @@ define(["./Movie"], function(Movie) {
          return resultado;
         }
     Director.prototype.speak = function (){
-            //console.log (this.getRandomQuote());
+            console.log (this.getRandomQuote());
             $("#dialog").textContent = this.getRandomQuote();  //no se como cambiarle el texto evidentemente ni como dividir paginas
             window.location = "#dialog";
         } 

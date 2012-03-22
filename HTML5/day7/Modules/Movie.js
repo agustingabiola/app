@@ -1,7 +1,7 @@
 /* 
  * Movie Module
  */
-define(["./Director"], function(Director) {
+define([], function() {
     function Movie (p_title, p_rating, p_id){
         var title = p_title;
         var rating = p_rating;
