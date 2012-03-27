@@ -1,12 +1,12 @@
 /* 
  * Movie Module
  */
-define([], function() {
+define(["./Director"], function(Director) {
     function Movie (p_title, p_rating, p_id){
         var title = p_title;
         var rating = p_rating;
         var id = p_id;
-        var director;
+        var director = new Director();
 
         this.getTitle = function (){
                             console.log (title);

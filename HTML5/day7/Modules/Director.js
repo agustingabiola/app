@@ -1,7 +1,7 @@
 /* 
  * Director Module
  */
-define(["./Movie"], function(Movie) {
+define([], function() {
     function Director (p_name, p_quote){
         this.name = p_name;
         this.quotes = p_quote;

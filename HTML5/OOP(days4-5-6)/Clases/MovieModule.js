@@ -1,34 +1,31 @@
 //-------Punto 7)
 
-var MovieModule = {
-    title: 'somevalue',
-    rating: 'p_rating',
-    id: 'p_id',
-    
-    getTitle : function (){
-                        console.log (this.title);
-                        return this.title;
-                    },
-    setTitle:  function (p_title){this.title = p_title;},
-    
-    getRating: function (){
-                        console.log (this.rating);
-                        return this.rating;
-                    },
-    setRating: function (p_rating){this.rating = p_rating;},
-    
-    getId: function (){
-                        console.log (this.id);
-                        return this.id;
-                    },
-    setId: function (p_id){this.id = p_id},
-    
-    play: function (){
-        //console.log ('The movie ' +title+ ' is now being played :)');
-        $.publish('movie_subscription',['playing', this]);
-    },    
-    stop: function (){
-        //console.log ('The movie with id: ' + id +' has now been stoppped!!');
-        $.publish('movie_subscription',['stopped', this]);
-    }
-};
+var MovieModule = function Movie (p_title, p_rating, p_id){
+        var title = p_title;
+        var rating = p_rating;
+        var id = p_id;
+        var director = new Director();
+
+        this.getTitle = function (){
+                            console.log (title);
+                            return title;
+                        }
+        this.setTitle = function (p_title){title = p_title;}
+
+        this.getRating = function (){
+                            console.log (rating);
+                            return rating;
+                        }
+        this.setRating = function (p_rating){rating = p_rating;}
+
+        this.getId = function (){
+                            console.log (id);
+                            return id;
+                        }
+        this.setId = function (p_id){id = p_id}
+        
+        this.setDirector = function (_director){director = _director;}
+        this.getDirector = function (){return director;}
+
+        return (this);
+    };

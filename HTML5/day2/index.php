@@ -4,8 +4,6 @@
 	<title>My Page</title> 
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=yes"> 
 	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.0-rc.1/jquery.mobile-1.1.0-rc.1.min.css" />
-	<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
-	<script src="http://code.jquery.com/mobile/1.1.0-rc.1/jquery.mobile-1.1.0-rc.1.min.js"></script>
 </head> 
 <body> 
     <div data-role="page" id="main_page">
@@ -107,7 +105,9 @@
         <div data-role="content">
             <p>This is a DIALOG</p>
         </div>
-    </div>
-    <script src="day2.js" type="text/javascript"></script>
+    </div>      
+	<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.1.0-rc.1/jquery.mobile-1.1.0-rc.1.min.js"></script>
+    <script src="day2.js" type="text/javascript"></script>  
 </body>
 </html>
