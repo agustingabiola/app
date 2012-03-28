@@ -29,12 +29,13 @@ function Movie (p_title, p_rating, p_id){
     
     this.play = function (){
         //console.log ('The movie ' +title+ ' is now being played :)');
-        $.publish("movie_subscription",["playing", this]);
+         $(window).trigger('play',[this.getTitle ()]);
     }
     
     this.stop = function (){
         //console.log ('The movie with id: ' + id +' has now been stoppped!!');
-        $.publish("movie_subscription",["stopped", this]);
+        $(window).trigger('stop',[this.getTitle()]);
+        
     }
     
     //--------Puntos 14-15
