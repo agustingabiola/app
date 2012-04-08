@@ -55,14 +55,22 @@
                     <h2>Subtitle 3333</h2>
                 </hgroup>
                 <div id="text">
-                    <p>Basta de texto latin generado...<span class="hiThree">hiThree</span> </p>
+                    <p>Basta de texto latin generado...<span class="hiThree">hiThree</span> </p>                    
+                    <video tabindex="0" id="clip" controls="controls" width="390">
+                        <source src="HTML5%20Presentation_files/chrome_japan.webm">
+                        <source src="HTML5%20Presentation_files/chrome_japan.mp4">
+                        <source src="HTML5%20Presentation_files/chrome_japan.ogv">
+                        Your browser does not support the video tag
+                    </video>
+
                 </div>
             </article>
             <!-- fin articulo 3-->     
         </section>
         <aside>
             <h2>About section</h2>
-                <p>About HTML5</p>
+            <p>About HTML5</p>
+            <time datetime="2012-04-02">2012</time>.
         </aside>
         <footer>The end</footer> 
         </header>
