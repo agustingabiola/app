@@ -7,9 +7,9 @@ $(function (){
     var Movie = Backbone.Model.extend({
 
         defaults: {
-            title: "Summer of 69",
-            year: "1969",
-            details: "No Data."        
+            title: 'Summer of 69',
+            year: '1969',
+            details: 'No Data.'        
         },
         remove: function() {
             this.destroy();
@@ -19,17 +19,17 @@ $(function (){
     //---Ahora creamos una coleccion del modelo
     var movieList = Backbone.Collection.extend({
         model: Movie,
-        localStorage: new Store("movies-backbone")
+        localStorage: new Store('movies-backbone')
     });
     //----Creamos una vista de MovieList
     //------------------------------------
     var movieListView = Backbone.View.extend({
-                tagName: "li", //de tipo lista
+                tagName: 'li', //de tipo lista
                 template: _.template($('#movieTemplate').html()),
 
                 events: {
-                    "keypress .edits" : "updateOnEnter",
-                    "click #clearButton" : "clear"
+                    'keypress .edits' : 'updateOnEnter',
+                    'click #clearButton' : 'clear'
                 },
 
                 initialize: function() {
@@ -41,15 +41,15 @@ $(function (){
                     return this;
                 },
                 close: function() {
-                    this.$('#movie').show("slow");
-                    this.$('#actualMovie').hide("slow");
+                    this.$('#movie').show('slow');
+                    this.$('#actualMovie').hide('slow');
                 },
                 updateOnEnter: function(e) {
                     if (e.keyCode == 13) this.close();
                 },
                 clear: function() {
-                    alert ("llega hasta aca? no");
-                    this.$('#movie').hide("slow");
+                    alert ('llega hasta aca? no');
+                    this.$('#movie').hide('slow');
                     this.model.clear();
                 }
             });
@@ -58,16 +58,16 @@ $(function (){
         
         var pageView = Backbone.View.extend({
 
-            el: $("#inicial"),
+            el: $('#inicial'),
 
             events: {
-                "keypress #movieYear": "crear"
+                'keypress #movieYear': 'crear'
             },
 
             initialize: function() {
 
-                this.input = this.$("#movieTitle");
-                this.inputY = this.$("#movieYear");
+                this.input = this.$('#movieTitle');
+                this.inputY = this.$('#movieYear');
 
                 shownMovieList.bind('add', this.addOne, this);
                 shownMovieList.bind('reset', this.addAll, this);
@@ -76,7 +76,7 @@ $(function (){
             },
             addOne: function(Movie) {
                 var view = new movieListView({model: Movie});
-                this.$("#moviesList").append(view.render().el);
+                this.$('#moviesList').append(view.render().el);
             },
 
             addAll: function() {
